@@ -119,7 +119,7 @@ func (f *Fetcher) FormatOutput(format string) (string, string) {
 	for _, sofiaProfile := range f.sofiaProfiles {
 		profiles += fmt.Sprintf("freeswitch_profile_sessions,profile=%s,ip=%s running=%s\n",
 			sofiaProfile.Name,
-			sofiaProfile.IP,
+			sofiaProfile.Address,
 			sofiaProfile.Running)
 	}
 	return status, profiles
